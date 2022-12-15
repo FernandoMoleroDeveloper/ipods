@@ -1,0 +1,16 @@
+
+
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'card.scss';
+
+
+
+body{
+    min-height: 100vh;
+    font-family: $font-family;
+    @include flex(flex, row, nowrap, center, center);
+    @include color($color-secund, $color-secund);
+    @include space(0,20px);
+
+}

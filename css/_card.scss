@@ -1,0 +1,77 @@
+
+
+.card{
+    width: 500px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3)
+    border-radius: $size-px - 5px;
+    overflow: hidden;
+    @include color($color-secund,$color-first);
+    @include space(20px );
+
+    &__header{
+        @include flex(flex, column, nowrap, center, center);
+    }
+
+    &__title{ 
+        @include space(0, 20px);
+        @include text(20px + 10px, bold, uppercase);
+    }
+
+    &__img{
+        width:35%;
+    }
+
+    &__body{
+        @include space(0,20px);
+    }
+
+    &__subtitle{
+        @include space(20px  0 ,0);
+        @include text(20px  + 10px);
+    }
+
+    &__description{
+        color:$color-third;
+        @include space(0 ,0);
+        @include text(20px  - 6px);
+     
+    }
+
+    &__footer{
+        @include flexible(flex, row, nowrap, center, center);
+        @include space(0, 20px);
+    }
+
+    &__button{
+        border: 1px solid $color-secund;
+        @include color($color-secund, $color-first);
+        @include space(0, 20px - 5px);
+        @include text(20px  - 5px);
+    
+
+        &:hover{
+            @include color($color-first, $color-secund);
+        }
+    }
+
+    &--reverse{
+        @include color($color-first, $color-secund);
+
+        .card__title, .card__subtitle{
+            @include color($color-first, $color-secund);
+        }
+        .card__description{
+            @include color($color-third, $color-secund);
+        }
+        .card__button{
+            border: 1px solid $color-first;
+            @include color($color-first, $color-secund);
+       
+
+            &:hover{
+                @include color($color-secundary, $color-first);
+            }
+        }
+    }
+    
+}
